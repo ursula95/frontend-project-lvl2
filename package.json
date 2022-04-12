@@ -2,7 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "bin": { "gendiff": "bin/gendiff.js" },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "description": "[![Actions Status](https://github.com/ursula95/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/ursula95/frontend-project-lvl2/actions)",
   "main": "index.js",
   "scripts": {
@@ -17,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/ursula95/frontend-project-lvl2/issues"
   },
-  "homepage": "https://github.com/ursula95/frontend-project-lvl2#readme"
+  "homepage": "https://github.com/ursula95/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^9.1.0",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
 }

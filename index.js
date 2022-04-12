@@ -2,7 +2,6 @@ import { readFile } from './src/file.js';
 import resultDiff from './src/resultDiff.js';
 
 const genDiff = (filepath1, filepath2) => {
-
   const fileContent1 = readFile(filepath1);
   const fileContent2 = readFile(filepath2);
 
@@ -14,7 +13,6 @@ const genDiff = (filepath1, filepath2) => {
   const formatDiff = `{${diff.join('')}\n}`;
 
   return formatDiff;
-
-}
+};
 
 export default genDiff;

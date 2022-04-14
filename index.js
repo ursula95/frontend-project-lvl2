@@ -1,6 +1,6 @@
-import resultDiff from './src/resultDiff.js';
 import { readFileSync } from 'fs';
-import { resolve, extname } from 'path';
+import { resolve } from 'path';
+import resultDiff from './src/resultDiff.js';
 
 const getParsedData = (path) => {
   const getData = readFileSync(resolve(path), 'utf-8');
@@ -9,7 +9,6 @@ const getParsedData = (path) => {
 };
 
 const genDiff = (filepath1, filepath2) => {
-
   const obj1 = getParsedData(filepath1);
   const obj2 = getParsedData(filepath2);
 

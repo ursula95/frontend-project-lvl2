@@ -3,3 +3,6 @@
 
 ## gendiff
 [![asciicast](https://asciinema.org/a/tyL0XE6hb7a4L7rITAl13Ke3X.svg)](https://asciinema.org/a/tyL0XE6hb7a4L7rITAl13Ke3X)
+
+## Codeclimate status
+[![Maintainability](https://api.codeclimate.com/v1/badges/741fca4cb3548bc5e1cb/maintainability)](https://codeclimate.com/github/ursula95/frontend-project-lvl2/maintainability)

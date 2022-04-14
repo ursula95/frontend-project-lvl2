@@ -1,31 +1,6 @@
-# установка зависимостей для проекта
-setup:
-	npm ci
-
-# установка gendiff cli
 install:
-	npm link
-
-# удаление gendiff cli
-uninstall:
-	npm unlink
-
-# запуск генератора различий
-gendiff $(filepath1) $(filepath2):
-	bin/gendiff.js $(filepath1) $(filepath2)
-
-# публикация пакета
-publish:
-	npm publish --dry-run
-
-# проверка линтером
+		npm ci
 lint:
-	npx eslint .
-
-# запуск тестов
+		npx eslint .
 test:
-	npm test
-
-# запуск расчета покрытия тестами
-test-coverage:
-	npm test -- --coverage --coverageProvider=v8
+		node --experimental-vm-modules "node_modules/.bin/jest"

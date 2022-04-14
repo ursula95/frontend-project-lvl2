@@ -1,12 +1,17 @@
-import { readFile } from './src/file.js';
 import resultDiff from './src/resultDiff.js';
+import { readFileSync } from 'fs';
+import { resolve, extname } from 'path';
+
+const getParsedData = (path) => {
+  const getData = readFileSync(resolve(path), 'utf-8');
+
+  return JSON.parse(getData);
+};
 
 const genDiff = (filepath1, filepath2) => {
-  const fileContent1 = readFile(filepath1);
-  const fileContent2 = readFile(filepath2);
 
-  const obj1 = JSON.parse(fileContent1);
-  const obj2 = JSON.parse(fileContent2);
+  const obj1 = getParsedData(filepath1);
+  const obj2 = getParsedData(filepath2);
 
   const diff = resultDiff(obj1, obj2);
 

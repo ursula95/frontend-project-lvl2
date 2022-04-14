@@ -4,7 +4,7 @@ const resultDiff = (obj1, obj2) => {
   const unitedKeys = _.union(Object.keys(obj1), Object.keys(obj2));
   const sortedUnitedKeys = _.sortBy(unitedKeys);
 
-  const newDiff = sortedUnitedKeys.map((key) => {
+  const newKeys = sortedUnitedKeys.map((key) => {
     const value1 = obj1[key];
     const value2 = obj2[key];
 
@@ -23,7 +23,7 @@ const resultDiff = (obj1, obj2) => {
     return `\n- ${key}: ${value1}\n+ ${key}: ${value2}`;
   });
 
-  return newDiff;
+  return newKeys;
 };
 
 export default resultDiff;

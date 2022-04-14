@@ -7,5 +7,8 @@
 ## Codeclimate status
 [![Maintainability](https://api.codeclimate.com/v1/badges/741fca4cb3548bc5e1cb/maintainability)](https://codeclimate.com/github/ursula95/frontend-project-lvl2/maintainability)
 
+### Unit tests & linter status
+[![linter](https://github.com/ursula95/frontend-project-lvl2/actions/workflows/testing.yml/badge.svg)](https://github.com/ursula95/frontend-project-lvl2/actions/workflows/testing.yml)
+
 ## Test Coverage
 [![Test Coverage](https://api.codeclimate.com/v1/badges/741fca4cb3548bc5e1cb/test_coverage)](https://codeclimate.com/github/ursula95/frontend-project-lvl2/test_coverage)

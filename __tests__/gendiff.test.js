@@ -10,7 +10,6 @@ const getPathFile = (filename) => path.join(__dirname, '..', '__fixtures__', fil
 const verifyNestedResult = fs.readFileSync(getPathFile('resultNested.txt'), 'utf-8');
 const verifyPlainResult = fs.readFileSync(getPathFile('resultPlain.txt'), 'utf-8');
 
-
 describe('genDiff', () => {
   test('check genDiff with recurtion json', () => {
     const nestedJson = genDiff(getPathFile('fileNested1.json'), getPathFile('fileNested2.json'));
@@ -29,5 +28,4 @@ describe('genDiff', () => {
 
     expect(diff).toEqual(verifyPlainResult);
   });
-  
 });

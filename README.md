@@ -10,6 +10,8 @@
 [![asciicast](https://asciinema.org/a/d9XCeA2Js0ANhUpfoQiGDBucX.svg)](https://asciinema.org/a/d9XCeA2Js0ANhUpfoQiGDBucX)
 # to plain format
 [![asciicast](https://asciinema.org/a/jBGn5dgJmwtaet369zf9holLk.svg)](https://asciinema.org/a/jBGn5dgJmwtaet369zf9holLk)
+# to json format
+[![asciicast](https://asciinema.org/a/5KaYhijBbucJQvz1mcAraNR5W.svg)](https://asciinema.org/a/5KaYhijBbucJQvz1mcAraNR5W)
 
 ## Codeclimate status
 [![Maintainability](https://api.codeclimate.com/v1/badges/741fca4cb3548bc5e1cb/maintainability)](https://codeclimate.com/github/ursula95/frontend-project-lvl2/maintainability)

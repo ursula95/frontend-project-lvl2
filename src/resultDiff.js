@@ -1,29 +1,53 @@
 import _ from 'lodash';
+import nodeTypes from './nodeTypes.js';
 
 const resultDiff = (obj1, obj2) => {
   const unitedKeys = _.union(Object.keys(obj1), Object.keys(obj2));
   const sortedUnitedKeys = _.sortBy(unitedKeys);
 
-  const newKeys = sortedUnitedKeys.map((key) => {
+  return sortedUnitedKeys.map((key) => {
     const value1 = obj1[key];
     const value2 = obj2[key];
 
     if (!_.has(obj1, key)) {
-      return `\n+ ${key}: ${value2}`;
+      return {
+        key,
+        type: nodeTypes.added,
+        prevValue: value2,
+      };
     }
 
     if (!_.has(obj2, key)) {
-      return `\n- ${key}: ${value1}`;
+      return {
+        key,
+        type: nodeTypes.removed,
+        prevValue: value1,
+      };
     }
 
     if (value1 === value2) {
-      return `\n  ${key}: ${value1}`;
+      return {
+        key,
+        type: nodeTypes.unchanged,
+        prevValue: value1,
+      };
     }
 
-    return `\n- ${key}: ${value1}\n+ ${key}: ${value2}`;
-  });
+    if (_.isObject(value1) && _.isObject(value2)) {
+      return {
+        key,
+        type: nodeTypes.nested,
+        children: resultDiff(value1, value2),
+      };
+    }
 
-  return newKeys;
+    return {
+      key,
+      type: nodeTypes.changed,
+      prevValue: value1,
+      nextValue: value2,
+    };
+  });
 };
 
 export default resultDiff;
